@@ -30,6 +30,9 @@ import ExamRoutine from "./Pages/Student/ExamRoutine";
 import Attendance from "./Pages/Student/Attendance";
 import ReportCard from "./Pages/Student/ReportCard";
 import MyDues from "./Pages/Student/MyDues";
+import AdmissionProcedure from "./Pages/AdmissionProcedure";
+import AdmissionRequirements from "./Pages/AdmissionRequirements";
+import AdmissionFAQ from "./Pages/AdmissionFAQ";
 
 export const routes = createBrowserRouter ([
   {
@@ -103,6 +106,18 @@ export const routes = createBrowserRouter ([
       {
         path: "fees-payment",
         element: <FeeAndPayments/>
+      },
+      {
+        path:'admission-procedure',
+        element: <AdmissionProcedure/>
+      },
+      {
+        path:'admission-requirements',
+        element: <AdmissionRequirements/>
+      },
+      {
+        path:'admission-faq',
+        element: <AdmissionFAQ/>
       },
       {
         path:"school-message",

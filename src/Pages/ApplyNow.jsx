@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ApplyNow = () => {
   const [form, setForm] = useState({
@@ -36,7 +38,15 @@ const ApplyNow = () => {
         </p>
       </div>
 
-      {/* Form Container */}
+
+      <div className="grid grid-col-1 md:grid-cols-2 max-w-7xl mx-auto gap-10">
+
+        <div className=" max-w-7xl mx-auto my-10">
+        <h1 className="text-4xl font-bold text-gray-800 mb-10">Online Application</h1>
+        <p className="text-gray-500 mt-2 mb-10">Join SchoolSync for quality education and academic growth. Apply for admission by filling out our online application form with the necessary documents listed on the form to tailor our educational programs to your needs and aspirations. Contact us for any questions or assistance. Thank you for considering Oxford International School. We look forward to welcoming you.</p>
+           <Link to='/admission-requirements' className="flex items-center max-w-fit bg-blue-500 hover:bg-red-600 duration-150 text-white py-2 px-4 rounded"> Check Requirements  <span><FaArrowRight className="ml-2"/></span></Link>
+      </div>
+
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-8">
 
         <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-5">
@@ -185,6 +195,12 @@ const ApplyNow = () => {
 
         </form>
       </div>
+      </div>
+
+      {/* Form Container */}
+
+
+
     </div>
   );
 };

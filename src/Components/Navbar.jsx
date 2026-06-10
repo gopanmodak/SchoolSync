@@ -107,6 +107,28 @@ const Navbar = () => {
                     >
                       Fees And Payment
                     </NavLink>
+                    <NavLink
+                      to="/admission-requirements"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Admission Requirements
+
+                    </NavLink>
+                    <NavLink
+                      to="/admission-procedure"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Admission Procedure
+
+
+                    </NavLink>
+                    <NavLink
+                      to="/admission-faq"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Admission FAQ
+
+                    </NavLink>
                   </div>
                 </li>
                 <li>
