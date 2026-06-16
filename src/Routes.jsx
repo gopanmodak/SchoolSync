@@ -33,6 +33,11 @@ import MyDues from "./Pages/Student/MyDues";
 import AdmissionProcedure from "./Pages/AdmissionProcedure";
 import AdmissionRequirements from "./Pages/AdmissionRequirements";
 import AdmissionFAQ from "./Pages/AdmissionFAQ";
+import SchemeOfSubjects from "./Pages/SchemeOfSubjects";
+import Infrastructure from "./Pages/Infrastructure";
+import MultimediaClassroom from "./Pages/MultimediaClassroom";
+import OnlineAttendanceSystem from "./Pages/OnlineAttendanceSystem";
+import CoCurricularCultural from "./Pages/CoCurricularCultural";
 
 export const routes = createBrowserRouter ([
   {
@@ -66,6 +71,10 @@ export const routes = createBrowserRouter ([
       {
         path: "current-student",
         element: <CurrentStudent/>
+      },
+      {
+        path: "scheme-of-subjects",
+        element: <SchemeOfSubjects />
       },
       {
         path: "instruction",
@@ -106,6 +115,23 @@ export const routes = createBrowserRouter ([
       {
         path: "fees-payment",
         element: <FeeAndPayments/>
+      },
+      {
+        path: 'multimedia-classroom',
+        element: <MultimediaClassroom/>
+      },
+      {
+        path: 'online-attendance-system',
+        element: <OnlineAttendanceSystem/>
+      },
+      {
+        path: 'cocurricular-cultural',
+        element: <CoCurricularCultural/>
+      },
+
+      {
+        path: 'infrastructure',
+        element: <Infrastructure/>
       },
       {
         path:'admission-procedure',

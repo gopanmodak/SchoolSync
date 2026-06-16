@@ -45,8 +45,8 @@ const SchoolStatistics = () => {
             transition={{ duration: 1 }}
           className="flex flex-col items-center text-center">
             <p><FaAward  className="text-5xl text-orange-700" /></p>
-            <h2 className="text-4xl font-bold text-blue-950">20+</h2>
-            <p className="text-lg text-orange-700">Country Topper in last 5 years</p>
+            <h2 className="text-4xl font-bold text-blue-950">2</h2>
+            <p className="text-lg text-orange-700">Total Branch</p>
           </motion.div>
          
       </div>

@@ -63,11 +63,12 @@ const TeachingStaff = () => {
 
           <div>
             <h1 className="text-5xl font-extrabold text-white">
-              Teaching Staff
+             Our Distinguished Faculty
+
             </h1>
 
             <p className="text-white/80 mt-3 text-lg">
-              Meet our highly qualified and dedicated teachers.
+Meet the global educators shaping the next generation of leaders through innovation, empathy, and academic rigour. 
             </p>
           </div>
 

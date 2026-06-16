@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
 
-const images = [
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
-  "https://images.unsplash.com/photo-1577896851231-70ef18881754",
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7",
-  "https://images.unsplash.com/photo-1596495577886-d920f1fb7238",
-  "https://images.unsplash.com/photo-1558021212-51b6ecfa0db9",
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
-  "https://images.unsplash.com/photo-1588072432836-e10032774350",
-];
+
 
 const PhotoGallery = () => {
   return (
@@ -59,23 +50,20 @@ const PhotoGallery = () => {
       </motion.h1>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-
-        {images.map((img, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            className="overflow-hidden rounded-xl shadow-md"
-          >
-            <img
-              src={`${img}?auto=format&fit=crop&w=600&q=80`}
-              alt="school"
-              className="w-full h-52 object-cover transition duration-300 hover:brightness-75"
-            />
-          </motion.div>
-        ))}
-
-      </div>
+     <section className="py-6 bg-gray-100 text-gray-50">
+	<div className="container grid grid-cols-2 gap-10 p-4 mx-auto md:grid-cols-4">
+		<img src="https://images.unsplash.com/photo-1617721926586-4eecce739745?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTExfHxzY2hvb2x8ZW58MHx8MHx8fDA%3D" alt="" className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 bg-gray-500 aspect-square" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105 " src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://images.unsplash.com/photo-1509062522246-3755977927d7" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://images.unsplash.com/photo-1613896527026-f195d5c818ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://plus.unsplash.com/premium_photo-1682955296259-65540591f0c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://images.unsplash.com/photo-1588072432836-e10032774350" />
+		<img alt="" className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square object-cover hover: scale-105" src="https://images.unsplash.com/photo-1577896851231-70ef18881754" />
+		<img src="https://images.unsplash.com/photo-1581726707445-75cbe4efc586?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D" alt="" className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 bg-gray-500 aspect-square" />
+	</div>
+</section>
 
     </div>
    </div>

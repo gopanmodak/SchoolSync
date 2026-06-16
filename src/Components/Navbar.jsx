@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -17,16 +18,23 @@ const Navbar = () => {
       { (
         <div>
           {/* 🔹 Logo Section (আগের মতোই আলাদা) */}
-          <div className="max-w-7xl mx-auto py-4 flex justify-center ">
+          <div className="max-w-7xl mx-auto py-4 flex justify-between items-center ">
             <img
               src={logo}
               alt="School Logo"
               className="max-w-xs md:max-w-sm"
             />
+
+
+            <button className="btn btn-primary ml-4" onClick={()=>navigate('/apply-now')}> Apply Now </button>
           </div>
 
           {/* 🔹 Navbar */}
-          <nav className="bg-gray-900 text-white fixed w-full h-16 flex items-center top-0 z-50 shadow-md">
+          
+
+          <div className="sticky top-0 z-50 bg-gray-900 text-white">
+            
+            <nav className="h-16 flex items-center shadow-md">
             <div className="max-w-7xl mx-auto px-6 py-3">
               <ul className="flex gap-8 items-center justify-center">
                 <li>
@@ -85,6 +93,36 @@ const Navbar = () => {
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
                       Current Student
+                    </NavLink>
+                    <NavLink
+                      to="/scheme-of-subjects"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Scheme Of Subjects
+                    </NavLink>
+                     <NavLink
+                      to="/instruction"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Instruction
+                    </NavLink>
+                    <NavLink
+                      to="/payment-procedure"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Payment Procedure
+                    </NavLink>
+                    <NavLink
+                      to="/discipline"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Discipline
+                    </NavLink>
+                    <NavLink
+                      to="/uniform"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Uniform
                     </NavLink>
                   </div>
                 </li>
@@ -161,44 +199,37 @@ const Navbar = () => {
 
                 <li className="relative group">
                   <button className="hover:text-blue-400">
-                    Rules & Regulations
+                    Facilities
                   </button>
 
                   <div className="absolute left-0 top-full hidden group-hover:block bg-white text-black rounded shadow-lg min-w-55">
-                    <NavLink
-                      to="/instruction"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Instruction
-                    </NavLink>
-                    <NavLink
-                      to="/payment-procedure"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Payment Procedure
-                    </NavLink>
-                    <NavLink
-                      to="/discipline"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Discipline
-                    </NavLink>
-                    <NavLink
-                      to="/uniform"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Uniform
-                    </NavLink>
+                   <NavLink to="/multimedia-classroom" className="block px-4 py-2 hover:bg-gray-100">
+                   Multimedia Classroom</NavLink>
+                   <NavLink to="/infrastructure" className="block px-4 py-2 hover:bg-gray-100">
+                   Infrastructure</NavLink>
+                   <NavLink to="/cocurricular-cultural" className="block px-4 py-2 hover:bg-gray-100">
+                   Co-curricular & Cultural</NavLink>
+                   <NavLink to="/online-attendance-systemmultimedia-classroom" className="block px-4 py-2 hover:bg-gray-100">
+                  Online Attendance System</NavLink>
                   </div>
                 </li>
 
-                <li>
-                  <NavLink to="/result" className="hover:text-blue-400">
-                    Result
+                <li className="relative group">
+                 <button>
+                  Results
+                 </button>
+
+                 <div className="absolute left-0 top-full hidden group-hover:block bg-white text-black rounded shadow-lg min-w-55">
+                         
+                         <a href="https://www.educationboardresults.gov.bd/v2/home" target="_blank" className="block px-4 py-2 hover:text-blue-400">Board Result</a>
+                         <NavLink to="/result" className="block px-4 py-2 hover:text-blue-400">
+                  Acamemic Result
                   </NavLink>
+                 </div>
                 </li>
 
-                {user ? (
+
+ {user ? (
                   <li>
                     <button
                       onClick={() => {
@@ -232,9 +263,12 @@ const Navbar = () => {
                     </div>
                   </li>
                 )}
+               
               </ul>
             </div>
           </nav>
+            </div>
+
         </div>
       )}
     </>

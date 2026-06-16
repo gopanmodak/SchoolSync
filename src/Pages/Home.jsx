@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion'
+import { BiSupport } from "react-icons/bi"
+import { FaArrowRightLong } from "react-icons/fa6"
+import { Link } from 'react-router-dom'
 import CreativeTeaching from "../Components/CreativeTeaching"
+import LatestNews from '../Components/LatestNews'
 import MyMarquee from "../Components/MyMarquee"
 import SchoolStatistics from "../Components/SchoolStatistics"
 import SliderImages from "../Components/SliderImages"
+import Testimonials from '../Components/Testimonials'
 import UpcommingEvents from "../Components/UpcommingEvents"
+import VideosLeatestSection from '../Components/VideosLeatestSection'
+import VisionMission from '../Components/VisionMission'
+import WhyChooseUs from '../Components/WhyChooseUs'
 import HomeNoticeBoard from "./HomeNoticeBoard"
-import { Link } from 'react-router-dom'
-import { FaArrowRightLong } from "react-icons/fa6";
+
+
 
 
 const Home = () => {
@@ -74,9 +82,16 @@ const Home = () => {
     <p className="text-lg leading-relaxed text-gray-800 mb-6">
       We are delighted to welcome you to SchoolSync, a modern and dynamic learning environment designed to inspire excellence in every student. Our mission is to provide a balanced education that nurtures both academic achievement and personal growth. At SchoolSync, we believe that every child has unique talents waiting to be discovered, and our dedicated teachers and staff work tirelessly to create opportunities for students to shine.
     </p>
-    <div>
+    <div className="flex items-center">
       <Link to="/school-message" className="btn btn-primary mr-5 hover:scale-105 transition">Read Full Message <span className="ml-2"><FaArrowRightLong /></span></Link>
-      
+       <div className="flex gap-3 items-center p-3 rounded-2xl ">
+
+        <p><BiSupport   className='text-5xl text-yellow-400'/></p>
+        <div>
+          <p className="font-bold text-green-500 ">Contact for Admission</p>
+        <p className="font-bold text-yellow-400">01709200099</p>
+        </div>
+       </div>
     </div>
   </div>
 </div>
@@ -85,7 +100,10 @@ const Home = () => {
  {/* Message */}
 
  <div className="max-w-7xl mx-auto my-20 p-6">
-  <h2 className="text-xl font-bold mb-2 text-blue-600">MESSAGE</h2>
+  <div className="flex justify-between items-center">
+    <h2 className="text-xl font-bold mb-2 text-blue-600">MESSAGE</h2>
+    <Link to="/school-message" className="text-blue-600 hover:underline"> See All</Link>
+  </div>
   <h1 className="text-4xl font-bold mb-8">Together We Achieve Greatness.</h1>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -118,7 +136,7 @@ const Home = () => {
     
     <div className="relative cursor-pointer group">
       <img 
-        src="https://bafsk.edu.bd/public/storage/optionbuilder/uploads/jAvJWGC751QWk1RRABBSAtlUmdLkJKXZ.jpg" 
+        src="https://bafsk.edu.bd/public/storage/optionbuilder/uploads/fbGbsp3bD3pKLpr9nP6PVlCsWqb0jbQt.jpg" 
         alt="Vice Principal portrait" 
         className="w-full rounded-lg"
       />
@@ -142,6 +160,7 @@ const Home = () => {
 </div>
 
 
+       <WhyChooseUs />
 
       <CreativeTeaching />
 
@@ -149,6 +168,16 @@ const Home = () => {
 
       <SchoolStatistics />
 
+      <VideosLeatestSection />
+
+      <LatestNews />
+
+      < VisionMission />
+
+      <Testimonials />
+
+     
+      
     </div>
   )
 }

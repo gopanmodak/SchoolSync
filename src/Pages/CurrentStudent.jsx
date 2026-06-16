@@ -1,3 +1,4 @@
+import { FaFemale, FaMale } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const studentData = [
@@ -148,7 +149,7 @@ const CurrentStudent = () => {
 
                   <div>
                     <p className="text-blue-600 font-semibold">
-                      👦 Male
+                      <span> <FaMale /></span> Male
                     </p>
 
                     <h4 className="text-xl font-bold">
@@ -158,7 +159,7 @@ const CurrentStudent = () => {
 
                   <div className="text-right">
                     <p className="text-pink-500 font-semibold">
-                      👧 Female
+                      <span> <FaFemale /></span> Female
                     </p>
 
                     <h4 className="text-xl font-bold">

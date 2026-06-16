@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CiCalendar } from "react-icons/ci";
 
 const events = [
@@ -51,16 +52,24 @@ const events = [
   },
 ];
 const UpcommingEvents = () => {
+
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleData = showAll ? events : events.slice(0,3);
   return (
     <div className="bg-gray-100 py-10">
       <div className="max-w-7xl mx-auto  p-8 rounded-2xl text-gray-700">
         <p className="font-bold text-center">Stay Updated</p>
-        <h1 className="text-3xl font-bold text-center pb-10 text-blue-950">
-          Latest News & Events
+        <h1 className="text-3xl font-bold text-center pb-3 text-blue-950">
+          Upcoming School Events
         </h1>
 
+       <div className="flex justify-center pb-15">
+         <span className="block border-t-3 border-t-amber-400 w-20 items-center"> </span>
+       </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {events.map((event) => (
+          {visibleData.map((event) => (
             <div className="card bg-base-100 w-96 shadow-sm hover:shadow-lg transition relative hover:scale-105" key={event.id}>
               <div className="card-body">
                 <p className="flex items-center gap-2">
@@ -80,6 +89,15 @@ const UpcommingEvents = () => {
               </figure>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="btn btn-primary"
+          >
+            {showAll ? "Show Less" : "Show More"}
+          </button>
         </div>
       </div>
     </div>
