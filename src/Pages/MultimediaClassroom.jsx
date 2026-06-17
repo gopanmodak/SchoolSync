@@ -160,12 +160,12 @@ const MultimediaClassroom = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop" 
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlnaXRhbCUyMGNsYXNzfGVufDB8fDB8fHww" 
                 alt="মাল্টিমিডিয়া ক্লাসরুম"
                 className="rounded-xl shadow-md w-full h-64 object-cover"
               />
               <div className="absolute -bottom-3 -right-3 bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-lg shadow-lg">
-                🚀 স্মার্ট লার্নিং
+                Smart Classroom
               </div>
             </div>
           </div>

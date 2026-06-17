@@ -209,7 +209,7 @@ const Navbar = () => {
                    Infrastructure</NavLink>
                    <NavLink to="/cocurricular-cultural" className="block px-4 py-2 hover:bg-gray-100">
                    Co-curricular & Cultural</NavLink>
-                   <NavLink to="/online-attendance-systemmultimedia-classroom" className="block px-4 py-2 hover:bg-gray-100">
+                   <NavLink to="/online-attendance-system" className="block px-4 py-2 hover:bg-gray-100">
                   Online Attendance System</NavLink>
                   </div>
                 </li>

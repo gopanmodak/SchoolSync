@@ -38,6 +38,8 @@ import Infrastructure from "./Pages/Infrastructure";
 import MultimediaClassroom from "./Pages/MultimediaClassroom";
 import OnlineAttendanceSystem from "./Pages/OnlineAttendanceSystem";
 import CoCurricularCultural from "./Pages/CoCurricularCultural";
+import PrincipalMessage from "./Pages/PrincipalMessage";
+import VicePrincipalMessage from "./Pages/VicePrincipalMessage";
 
 export const routes = createBrowserRouter ([
   {
@@ -123,6 +125,14 @@ export const routes = createBrowserRouter ([
       {
         path: 'online-attendance-system',
         element: <OnlineAttendanceSystem/>
+      },
+      {
+        path: 'principal-message',
+        element: <PrincipalMessage/>
+      },
+      {
+        path: 'vice-principal-message',
+        element: <VicePrincipalMessage/>
       },
       {
         path: 'cocurricular-cultural',

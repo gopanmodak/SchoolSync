@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { BiSupport } from "react-icons/bi"
 import { FaArrowRightLong } from "react-icons/fa6"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import CreativeTeaching from "../Components/CreativeTeaching"
 import LatestNews from '../Components/LatestNews'
 import MyMarquee from "../Components/MyMarquee"
@@ -18,6 +18,8 @@ import HomeNoticeBoard from "./HomeNoticeBoard"
 
 
 const Home = () => {
+
+  const navigate =useNavigate()
   return (
     <div>
       <SliderImages/>
@@ -127,7 +129,7 @@ const Home = () => {
         <p className="mb-6 px-4">
           "Together we achieve greatness through dedication, discipline, and creativity."
         </p>
-        <button className="btn btn-primary">Read More</button>
+        <button className="btn btn-primary" onClick={()=>navigate('/principal-message')}>Read More</button>
       </div>
     </div>
 
@@ -153,7 +155,7 @@ const Home = () => {
         <p className="mb-6 px-4">
           "We inspire students to unlock their potential and build a brighter future."
         </p>
-        <button className="btn btn-primary">Read More</button>
+        <button className="btn btn-primary" onClick={()=>navigate('/vice-principal-message')}>Read More</button>
       </div>
     </div>
   </div>
