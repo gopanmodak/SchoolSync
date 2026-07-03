@@ -112,9 +112,9 @@ const Home = () => {
     {/* Principal Card */}
     <div className="relative cursor-pointer group ">
       <img 
-        src="https://bafsk.edu.bd/public/storage/optionbuilder/uploads/jAvJWGC751QWk1RRABBSAtlUmdLkJKXZ.jpg" 
+        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
         alt="Principal portrait" 
-        className="w-full rounded-lg"
+        className="w-full rounded-lg object-cover h-150"
       />
 
       {/* Default Overlay */}
@@ -138,9 +138,9 @@ const Home = () => {
     
     <div className="relative cursor-pointer group">
       <img 
-        src="https://bafsk.edu.bd/public/storage/optionbuilder/uploads/fbGbsp3bD3pKLpr9nP6PVlCsWqb0jbQt.jpg" 
+        src="https://images.unsplash.com/photo-1648757766966-43d24bf7a264?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" 
         alt="Vice Principal portrait" 
-        className="w-full rounded-lg"
+        className="w-full rounded-lg h-150 object-cover"
       />
 
       {/* Default Overlay */}

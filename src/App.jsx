@@ -1,25 +1,22 @@
-import { Outlet } from "react-router-dom"
-import Footer from "./Components/Footer"
-import Navbar from "./Components/Navbar"
-import ScrollTop from "./Components/ScrollTop"
+import { Outlet } from "react-router-dom";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import ScrollTop from "./Components/ScrollTop";
 
 const App = () => {
   return (
     <div>
-      <ScrollTop/>
-<Navbar/>
+      <ScrollTop />
+      <Navbar />
 
-<div>
-  
-</div>
+      <div></div>
 
-<div className="">
-      <Outlet />
-</div>
-<Footer/>
-
+      <div className="">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
