@@ -40,6 +40,10 @@ import OnlineAttendanceSystem from "./Pages/OnlineAttendanceSystem";
 import CoCurricularCultural from "./Pages/CoCurricularCultural";
 import PrincipalMessage from "./Pages/PrincipalMessage";
 import VicePrincipalMessage from "./Pages/VicePrincipalMessage";
+import AllMessage from "./Pages/AllMessage";
+import TeacherHome from './Pages/Teacher/TeacherHome';
+import StudentAdmission from './Pages/Teacher/StudentAdmission';
+import StudentList from "./Pages/Teacher/StudentList";
 
 export const routes = createBrowserRouter ([
   {
@@ -131,6 +135,11 @@ export const routes = createBrowserRouter ([
         element: <PrincipalMessage/>
       },
       {
+        path: 'all-message',
+        element: <AllMessage/>
+
+      },
+      {
         path: 'vice-principal-message',
         element: <VicePrincipalMessage/>
       },
@@ -167,10 +176,7 @@ export const routes = createBrowserRouter ([
         path:"teacher-login",
         element:<TeacherLogin/>
       },
-      {
-        path: 'teacher-dashboard',
-        element: <TeacherDashboard/>
-      },
+      
       {
         path: "student-dashboard",
         element: <StudentDashboard/>,
@@ -207,6 +213,25 @@ export const routes = createBrowserRouter ([
           {
             path: 'my-dues',
             element: <MyDues />
+          }
+        ]
+      },
+
+      {
+        path: 'teacher-dashboard',
+        element: <TeacherDashboard />,
+        children:[
+          {
+            index:true,
+            element:<TeacherHome/>
+          },
+          {
+            path: 'student-admission',
+            element:<StudentAdmission/>
+          },
+          {
+            path: 'student-list',
+            element:<StudentList/>
           }
         ]
       }

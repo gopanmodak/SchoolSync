@@ -1,4 +1,4 @@
-import { createContext } from "react"
+import { createContext, useState } from "react"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
@@ -6,9 +6,15 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
 
+  const [formData,setFormData] = useState({
+
+})
+
   const authInfo = {
       name : "Md. Rezaul Karim",
-      email : "tYrV8@example.com"
+      
+      formData,
+      setFormData
   }
   return (
     < AuthContext.Provider value={authInfo}>

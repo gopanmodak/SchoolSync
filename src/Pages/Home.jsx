@@ -104,7 +104,7 @@ const Home = () => {
  <div className="max-w-7xl mx-auto my-20 p-6">
   <div className="flex justify-between items-center">
     <h2 className="text-xl font-bold mb-2 text-blue-600">MESSAGE</h2>
-    <Link to="/school-message" className="text-blue-600 hover:underline"> See All</Link>
+    <Link to="/all-message" className="text-blue-600 hover:underline"> See All</Link>
   </div>
   <h1 className="text-4xl font-bold mb-8">Together We Achieve Greatness.</h1>
 

@@ -1,5 +1,5 @@
 // Attendance.jsx
-import React, { useState } from 'react';
+import  { useState } from 'react'
 import {
   BarChart,
   Bar,
@@ -39,7 +39,10 @@ const Attendance = () => {
     { date: '2026-06-29', status: 'Present', checkIn: '08:55 AM', checkOut: '04:25 PM' },
     { date: '2026-06-28', status: 'Present', checkIn: '09:05 AM', checkOut: '04:35 PM' },
     { date: '2026-06-27', status: 'Late', checkIn: '09:30 AM', checkOut: '04:30 PM' },
-    { date: '2026-06-26', status: 'Present', checkIn: '08:50 AM', checkOut: '04:20 PM' },
+    { date: '2026-06-26', status: 'Present', checkIn: '08:53 AM', checkOut: '04:28 PM' },
+    { date: '2026-06-25', status: 'Present', checkIn: '08:55 AM', checkOut: '04:20 PM' },
+    { date: '2026-06-24', status: 'Present', checkIn: '08:41 AM', checkOut: '04:10 PM' },
+    { date: '2026-06-23', status: 'Present', checkIn: '08:50 AM', checkOut: '04:25 PM' },
   ];
 
   // ============================================================
