@@ -1,6 +1,4 @@
-import {  } from "react";
 import { CiCalendar } from "react-icons/ci";
-import { useNavigate } from "react-router-dom";
 
 const events = [
   {
@@ -52,33 +50,25 @@ const events = [
     monthly: "নভেম্বর",
   },
 ];
-const UpcommingEvents = () => {
 
-  const nevigate = useNavigate();
-
-  const visibleData =  events.slice(0,3);
+const EventsPages = () => {
   return (
     <div className="bg-gray-100 py-10">
-      <div className="max-w-7xl mx-auto  p-8 rounded-2xl text-gray-700">
-        <p className="font-bold text-center">Stay Updated</p>
-        <h1 className="text-3xl font-bold text-center pb-3 text-yellow-400">
-          Upcoming School Events
+      <div className="max-w-7xl mx-auto p-8 rounded-2xl text-gray-700">
+        <h1 className="text-3xl font-bold text-center pb-3 text-blue-950">
+          All School Events
         </h1>
-       
+        <span className="block w-30 border-t-2 border-t-amber-400 mx-auto"></span>
 
-       <div className="flex justify-center pb-15">
-         <span className="block border-t-3 border-t-amber-400 w-29 items-center"> </span>
-       </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {visibleData.map((event) => (
-            <div className="card bg-base-100 w-96 shadow-sm hover:shadow-lg transition relative hover:scale-105" key={event.id}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
+          {events.map((event) => (
+            <div
+              className="card bg-base-100 w-96 shadow-sm hover:shadow-lg transition relative hover:scale-105"
+              key={event.id}
+            >
               <div className="card-body">
                 <p className="flex items-center gap-2">
-                  {" "}
-                  <span>
-                    <CiCalendar className="text-xl text-green-600" />
-                  </span>{" "}
+                  <CiCalendar className="text-xl text-green-600" />
                   {event.monthly}
                 </p>
                 <h2 className="card-title">{event.title}</h2>
@@ -87,25 +77,14 @@ const UpcommingEvents = () => {
                 </p>
               </div>
               <figure>
-                <img src={event.img} alt="Shoes" />
+                <img src={event.img} alt={event.title} />
               </figure>
             </div>
           ))}
-        </div>
-
-        <div className="flex justify-center mt-10">
-          <button
-            onClick={() => nevigate("/event-pages")}
-           
-            className="btn btn-primary"
-          >
-            View All
-          
-          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default UpcommingEvents;
+export default EventsPages;

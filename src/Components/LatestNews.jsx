@@ -93,7 +93,8 @@ const LatestNews = () => {
     <div className="my-10 max-w-7xl mx-auto">
 
        <div>
-        <h3 className="text-4xl font-bold text-yellow-400 text-center my-10">Latest News</h3>
+        <h3 className="text-4xl font-bold text-yellow-400 text-center mt-10 p-2">Latest News</h3>
+        <span className="block w-30 border-t-2 border-t-amber-400 h-2 mx-auto mb-10"></span>
        </div>
 
 

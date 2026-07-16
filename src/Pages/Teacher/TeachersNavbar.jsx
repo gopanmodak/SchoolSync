@@ -4,10 +4,10 @@ const TeachersNavbar = () => {
   return (
     <div>
       <ul className="menu bg-base-200 rounded-box w-56">
-        <li>
+        
           <li>
             <Link to="">Dashboard</Link>
-          </li>
+         
 
           <details>
             <summary>Student Module</summary>
@@ -77,15 +77,22 @@ const TeachersNavbar = () => {
         </li>
 
         <li>
-          <details open>
-            <summary>Parent</summary>
+          <details >
+            <summary>Learning Module</summary>
             <ul>
               <li>
-                <a>Submenu 1</a>
+                <a>Add Home Work</a>
               </li>
               <li>
-                <a>Submenu 2</a>
+                <a>View Home Work</a>
               </li>
+              <li>
+                <a>Add Assignment </a>
+              </li>
+              <li>
+                <a>View Assignment </a>
+              </li>
+              
             </ul>
           </details>
         </li>

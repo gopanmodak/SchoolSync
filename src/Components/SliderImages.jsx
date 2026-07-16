@@ -63,7 +63,7 @@ const HeroSlider = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
 
-            {/* 👉 Fixed Background Layer */}
+            {/* Image */}
             <div
               className="h-125 md:h-150 w-full bg-fixed bg-center bg-cover relative"
               style={{ backgroundImage: `url(${slide.img})` }}

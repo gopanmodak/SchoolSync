@@ -103,24 +103,28 @@ const Home = () => {
 
  <div className="max-w-7xl mx-auto my-20 p-6">
   <div className="flex justify-between items-center">
-    <h2 className="text-xl font-bold mb-2 text-blue-600">MESSAGE</h2>
+    <h2 className="text-xl font-bold mb-2 text-yellow-400">MESSAGE</h2>
     <Link to="/all-message" className="text-blue-600 hover:underline"> See All</Link>
   </div>
   <h1 className="text-4xl font-bold mb-8">Together We Achieve Greatness.</h1>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     {/* Principal Card */}
-    <div className="relative cursor-pointer group ">
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5 }}
+    className="relative cursor-pointer group ">
       <img 
-        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdu73Lu-xqVE4Oy_F3wQelccoV81rwOC5GwGDRYSGeR0SP3xDnPD3hoiM&s=10" 
         alt="Principal portrait" 
-        className="w-full rounded-lg object-cover h-150"
+        className="w-full rounded-lg transition duration-300 h-120 object-cover"
       />
 
       {/* Default Overlay */}
       <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-center bg-opacity-80 w-full transition duration-300 group-hover:hidden">
         <h1 className="text-2xl font-bold mt-4">Principal</h1>
-        <p className="text-lg font-bold mb-4">Gopan Modak</p>
+        <p className="text-lg font-bold mb-4">Professor Dr. Md. Abdul Karim</p>
       </div>
 
       {/* Hover Overlay */}
@@ -131,22 +135,26 @@ const Home = () => {
         </p>
         <button className="btn btn-primary" onClick={()=>navigate('/principal-message')}>Read More</button>
       </div>
-    </div>
+    </motion.div>
 
     {/* Vice Principal Card */}
     
     
-    <div className="relative cursor-pointer group">
+    <motion.div 
+    initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.5 }}
+    className="relative cursor-pointer group">
       <img 
-        src="https://images.unsplash.com/photo-1648757766966-43d24bf7a264?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpM5m0Fl_diqQJjgIWt9jg8-6cT4Ymo4iPJSqZ3Obo2sd33sFIKI_qxU0&s=10" 
         alt="Vice Principal portrait" 
-        className="w-full rounded-lg h-150 object-cover"
+        className="w-full rounded-lg h-120 object-cover"
       />
 
       {/* Default Overlay */}
       <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-center bg-opacity-80 w-full transition duration-300 group-hover:hidden">
         <h1 className="text-2xl font-bold mt-4">Vice Principal</h1>
-        <p className="text-lg font-bold mb-4">Rakibul Islam</p>
+        <p className="text-lg font-bold mb-4">Md. Kamal Hossain</p>
       </div>
 
       {/* Hover Overlay */}
@@ -157,7 +165,7 @@ const Home = () => {
         </p>
         <button className="btn btn-primary" onClick={()=>navigate('/vice-principal-message')}>Read More</button>
       </div>
-    </div>
+    </motion.div>
   </div>
 </div>
 

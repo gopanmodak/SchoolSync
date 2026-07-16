@@ -1,4 +1,6 @@
 import { FaBullseye, FaEye, FaHands, FaHeart, FaLightbulb, FaUsers } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const VisionMission = () => {
   const visionPoints = [
@@ -26,19 +28,23 @@ const VisionMission = () => {
     <div className="bg-linear-to-b from-blue-50 to-white py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         
-        {/* পেজ হেডার */}
+        {/* page header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
             Our Vision & Mission
           </h1>
-          <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             We believe that every child has infinite possibilities. Our goal is to awaken that potential and prepare them for future leadership.
           </p>
         </div>
 
         
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <motion.div 
+         initial={{ opacity: 0, y: -100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.7 }}
+        className="grid md:grid-cols-2 gap-8 mb-20">
           {/* vission */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
             <div className="bg-linear-to-r from-blue-600 to-indigo-600 p-6">
@@ -84,7 +90,7 @@ const VisionMission = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Values */}
         <div className="text-center mb-12">
@@ -108,9 +114,9 @@ const VisionMission = () => {
             “শিক্ষা হলো সবচেয়ে শক্তিশালী অস্ত্র, যা দিয়ে তুমি পৃথিবী পরিবর্তন করতে পারো।”
           </p>
           <p className="mt-4 text-lg">— নেলসন ম্যান্ডেলা</p>
-          <button className="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition">
+          <Link to="/about" className="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition cursor-pointer inline-block">
             আমাদের স্কুল সম্পর্কে আরও জানুন
-          </button>
+          </Link>
         </div>
 
       </div>

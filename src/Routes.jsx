@@ -44,6 +44,7 @@ import AllMessage from "./Pages/AllMessage";
 import TeacherHome from './Pages/Teacher/TeacherHome';
 import StudentAdmission from './Pages/Teacher/StudentAdmission';
 import StudentList from "./Pages/Teacher/StudentList";
+import EventsPages from "./Pages/EventsPages";
 
 export const routes = createBrowserRouter ([
   {
@@ -137,8 +138,12 @@ export const routes = createBrowserRouter ([
       {
         path: 'all-message',
         element: <AllMessage/>
-
       },
+      {
+        path: 'event-pages',
+        element: <EventsPages/>
+      }
+      ,
       {
         path: 'vice-principal-message',
         element: <VicePrincipalMessage/>

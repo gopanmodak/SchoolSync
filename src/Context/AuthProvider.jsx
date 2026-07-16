@@ -1,27 +1,28 @@
-import { createContext, useState } from "react"
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useEffect, useState } from "react";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
+const AuthProvider = ({ children }) => {
+  const [students, setStudents] = useState(() => {
+    const saved = localStorage.getItem("admissionForm");
+    return saved ? JSON.parse(saved) : [];
+  });
 
-const AuthProvider = ({children}) => {
-
-  const [formData,setFormData] = useState({
-
-})
+  useEffect(() => {
+    localStorage.setItem("admissionForm", JSON.stringify(students));
+  }, [students]);
 
   const authInfo = {
-      name : "Md. Rezaul Karim",
-      
-      formData,
-      setFormData
-  }
-  return (
-    < AuthContext.Provider value={authInfo}>
-    
-    {children}
-    </ AuthContext.Provider>
-  )
-}
+    students,
+    setStudents,
+  };
 
-export default AuthProvider
+  return (
+    <AuthContext.Provider value={authInfo}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export default AuthProvider;
