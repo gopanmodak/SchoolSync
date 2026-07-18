@@ -114,7 +114,7 @@ const VisionMission = () => {
             “শিক্ষা হলো সবচেয়ে শক্তিশালী অস্ত্র, যা দিয়ে তুমি পৃথিবী পরিবর্তন করতে পারো।”
           </p>
           <p className="mt-4 text-lg">— নেলসন ম্যান্ডেলা</p>
-          <Link to="/about" className="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition cursor-pointer inline-block">
+          <Link to="/about" className="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition cursor-pointer inline-block ">
             আমাদের স্কুল সম্পর্কে আরও জানুন
           </Link>
         </div>
