@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const VideosLeatestSection = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-12 gap-5 max-w-7xl mx-auto my-30'>
+    <div className='grid grid-cols-1 md:grid-cols-12 gap-5 max-w-7xl mx-auto my-30 p-0 md:p-5'>
 
       <div className='col-span-4 flex flex-col space-y-5'>
         <div>
