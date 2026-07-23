@@ -1,10 +1,9 @@
-// AuthProvider.jsx
 import { createContext, useEffect, useState } from "react";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
-// Default student object
+// Default Student Object
 const getDefaultStudent = () => ({
   firstName: "",
   dob: "",
@@ -30,35 +29,42 @@ const getDefaultStudent = () => ({
   terms: false,
 });
 
-// Safe function to load from localStorage
-const loadStudentFromStorage = () => {
+// Load Students from LocalStorage
+const loadStudentsFromStorage = () => {
   try {
     const saved = localStorage.getItem("admissionForm");
-    // If nothing is saved, return default
-    if (!saved) return getDefaultStudent();
-    // Try to parse the JSON
+
+    if (!saved) return [];
+
     const parsed = JSON.parse(saved);
-    // Make sure we have a valid object
-    return parsed && typeof parsed === "object" ? parsed : getDefaultStudent();
+
+    return Array.isArray(parsed) ? parsed : [];
   } catch (error) {
-    // If JSON is corrupted, return default
     console.warn("Failed to parse localStorage data:", error);
-    return getDefaultStudent();
+    return [];
   }
 };
 
 const AuthProvider = ({ children }) => {
-  const [student, setStudent] = useState(loadStudentFromStorage);
+  const [student, setStudent] = useState(loadStudentsFromStorage);
 
+  // Save students to localStorage
   useEffect(() => {
     try {
-      localStorage.setItem("admissionForm", JSON.stringify(student));
+      localStorage.setItem(
+        "admissionForm",
+        JSON.stringify(student)
+      );
     } catch (error) {
       console.warn("Failed to save to localStorage:", error);
     }
   }, [student]);
 
-  const authInfo = { student, setStudent };
+  const authInfo = {
+    student,
+    setStudent,
+    getDefaultStudent,
+  };
 
   return (
     <AuthContext.Provider value={authInfo}>
